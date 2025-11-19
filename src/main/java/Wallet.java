@@ -9,12 +9,13 @@ public class Wallet {
     private String brand;
     private double weight;
     private double money;
-    private boolean lost = false;
+    private boolean isLost;
 
     public Wallet(String color, String brand, double weight) {
         this.color = color;
         this.brand = brand;
         this.weight = weight;
+        this.isLost = false;
     }
 
     public void addMoney(double amount) {
@@ -35,7 +36,7 @@ public class Wallet {
     }
 
     public void lose() {
-        this.lost = true;
+        this.isLost = true;
     }
 
     public List<String> getCards() {
@@ -71,7 +72,7 @@ public class Wallet {
     }
 
     public boolean isLost() {
-        return lost;
+        return isLost;
     }
 
 }
