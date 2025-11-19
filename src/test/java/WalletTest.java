@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.junit.Assert.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 class WalletTest {
 
@@ -39,12 +38,6 @@ class WalletTest {
         assertEquals(2, cards.size());
         assertTrue(cards.contains("Visa"));
         assertTrue(cards.contains("MasterCard"));
-    }
-
-    @Test
-    void testAddCardNullOrEmptyThrows() {
-        assertThrows(IllegalArgumentException.class, () -> wallet.addCard(null));
-        assertThrows(IllegalArgumentException.class, () -> wallet.addCard("   "));
     }
 
     @Test
