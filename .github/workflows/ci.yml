@@ -29,11 +29,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
+      - name: Show Checkstyle config
+        run: ls -R .
+
       - name: Build with Maven
         run: mvn clean compile
 
       - name: Run tests
         run: mvn test
 
-      - name: Run Checkstyle
+      - name: Run Checkstyle with custom rules
         run: mvn checkstyle:check
