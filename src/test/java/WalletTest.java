@@ -20,8 +20,8 @@ class WalletTest {
         wallet.addMoney(100);
         assertEquals(100, wallet.getMoney(), 0.001);
 
-        assertTrue(wallet.checkMoney(50));   // Suffisamment d'argent
-        assertFalse(wallet.checkMoney(150)); // Pas assez
+        assertTrue(wallet.checkMoney(50));
+        assertFalse(wallet.checkMoney(150));
     }
 
     @Test
